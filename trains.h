@@ -13,19 +13,21 @@
 #include <string_view>
 #include <utility> // Used for std::move and std::exchange functions.
 
-enum class WagonType { FIRST_CLASS,
-                       SECOND_CLASS,
-                       SLEEPER,
-                       DINING };
+enum class WagonType { 
+    FIRST_CLASS,
+    SECOND_CLASS,
+    SLEEPER,
+    DINING 
+};
 
 namespace trains_details {
 // Numbers of seats in the standard series.
-inline constexpr std::array<std::size_t, 4> STANDARD_SEATS{
-    54, 80, 30, 32};
+inline constexpr std::array<std::size_t, 4> STANDARD_SEATS{54, 80, 30, 32};
 // Names of the wagon types used when printing. The order of the elements is
 // the same as the order of the values of WagonType.
 inline constexpr std::array<std::string_view, 4> TYPE_NAMES{
-    "1 klasa", "2 klasa", "sypialny", "restauracyjny"};
+    "1 klasa", "2 klasa", "sypialny", "restauracyjny"
+};
 
 inline constexpr std::string_view UNKNOWN_DESIGNATION = "?";
 
